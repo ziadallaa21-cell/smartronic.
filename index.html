@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMARTRONIC - خدمات المصاعد</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #1e3c72;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card img, .card video {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            background-color: #000;
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            color: #2a5298;
+        }
+
+        .contact-box {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            color: white;
+            transition: opacity 0.3s ease;
+        }
+
+        .btn-phone { background-color: #007bff; }
+        .btn-whatsapp { background-color: #25d366; }
+
+        .btn:hover {
+            opacity: 0.9;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #1e3c72;
+            color: white;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>شركة SMARTRONIC</h1>
+        <p>نقدم أفضل خدمات تركيب المصاعد وأقوى فريق عمل يتعامل مع أي أعطال طوال 24 ساعة، مع خدمة الصيانة الشهرية بأعلى كفاءة.</p>
+    </header>
+
+    <div class="container">
+        <h2 class="section-title">خدماتنا ومعرض الأعمال</h2>
+        
+        <div class="services-grid">
+            <!-- الكارت الأول: يحتوي على الفيديو -->
+            <div class="card">
+                <video controls autoplay muted loop preload="metadata">
+                    <source src="video.mp4" type="video/mp4">
+                    متصفحك لا يدعم تشغيل الفيديو.
+                </video>
+                <h3>صيانة وتركيب المصاعد</h3>
+                <p>معاينة المحركات والمعدات والتركيبات الميكانيكية بأعلى جودة مع فريق صيانة متخصص.</p>
+            </div>
+            
+            <div class="card">
+                <img src="https://via.placeholder.com/300x180" alt="خدمة الأعطال">
+                <h3>طوارئ 24 ساعة</h3>
+                <p>فريق جاهز للتعامل مع أي أعطال طارئة طوال اليوم لضمان أمان المصاعد.</p>
+            </div>
+
+            <div class="card">
+                <img src="https://via.placeholder.com/300x180" alt="الصيانة الشهرية">
+                <h3>الصيانة الشهرية</h3>
+                <p>عقود صيانة دورية شهرية تفقدية تشمل القطع والزيوت والتحكم الكهربائي.</p>
+            </div>
+        </div>
+
+        <div class="contact-box">
+            <h2>تواصل معنا اليوم</h2>
+            <p>نحن هنا لمساعدتك، اختر وسيلة التواصل المناسبة لك:</p>
+            <div class="btn-group">
+                <a href="tel:+201008437663" class="btn btn-phone">📞 اتصال هاتفياً</a>
+                <a href="https://wa.me/201008437663" target="_blank" class="btn btn-whatsapp">💬 تواصل عبر واتساب</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>جميع الحقوق محفوظة &copy; 2026 شركة SMARTRONIC</p>
+    </footer>
+
+</body>
+</html>
