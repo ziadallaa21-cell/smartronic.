@@ -101,19 +101,24 @@
 
         .btn {
             display: inline-block;
-            padding: 12px 30px;
+            padding: 12px 25px;
             border-radius: 25px;
             text-decoration: none;
             font-weight: bold;
             color: white;
-            transition: opacity 0.3s ease;
+            transition: transform 0.2s ease, opacity 0.3s ease;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
         }
 
         .btn-phone { background-color: #007bff; }
         .btn-whatsapp { background-color: #25d366; }
-
-        .btn:hover {
-            opacity: 0.9;
+        .btn-facebook { background-color: #1877f2; }
+        .btn-instagram { 
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
         }
 
         footer {
@@ -136,7 +141,6 @@
         <h2 class="section-title">خدماتنا ومعرض الأعمال</h2>
         
         <div class="services-grid">
-            <!-- الكارت الأول: يحتوي على الفيديو -->
             <div class="card">
                 <video controls autoplay muted loop preload="metadata">
                     <source src="video.mp4" type="video/mp4">
@@ -160,11 +164,13 @@
         </div>
 
         <div class="contact-box">
-            <h2>تواصل معنا اليوم</h2>
-            <p>نحن هنا لمساعدتك، اختر وسيلة التواصل المناسبة لك:</p>
+            <h2>تواصل معنا وسجل إعجابك بصفحاتنا</h2>
+            <p>نحن هنا لمساعدتك، اختر وسيلة التواصل أو تابعنا على شبكات التواصل الاجتماعي:</p>
             <div class="btn-group">
                 <a href="tel:+201008437663" class="btn btn-phone">📞 اتصال هاتفياً</a>
                 <a href="https://wa.me/201008437663" target="_blank" class="btn btn-whatsapp">💬 تواصل عبر واتساب</a>
+                <a href="https://www.facebook.com/share/1Ewud6gU8q/?mibextid=wwXIfr" target="_blank" class="btn btn-facebook">📘 فيسبوك</a>
+                <a href="https://www.instagram.com/smartronic.elevators?stkn=MTJyNmpzOHZhMjg4aQ==" target="_blank" class="btn btn-instagram">📸 إنستجرام</a>
             </div>
         </div>
     </div>
