@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SMARTRONIC - خدمات المصاعد</title>
+    <title>SMARTRONIC - تركيب وصيانة المصاعد</title>
     <style>
         * {
             box-sizing: border-box;
@@ -13,27 +13,29 @@
         }
 
         body {
-            background-color: #f8f9fa;
-            color: #333;
-            line-height: 1.6;
+            background-color: #f4f6f9;
+            color: #2c3e50;
+            line-height: 1.7;
         }
 
+        /* الهيدر الرئيسي */
         header {
-            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
             color: white;
-            padding: 60px 20px;
+            padding: 50px 20px;
             text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
         }
 
         header h1 {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             margin-bottom: 10px;
         }
 
         header p {
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             opacity: 0.9;
-            max-width: 700px;
+            max-width: 800px;
             margin: 0 auto;
         }
 
@@ -43,75 +45,239 @@
             padding: 0 20px;
         }
 
-        .section-title {
+        /* قسم البوستر الإعلاني الرئيسي */
+        .banner-card {
+            background: white;
+            border-radius: 16px;
+            padding: 20px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            margin-bottom: 50px;
             text-align: center;
-            margin-bottom: 30px;
-            color: #1e3c72;
+            border: 1px solid #e9ecef;
         }
 
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
+        .banner-card img {
+            width: 100%;
+            max-width: 750px;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-header h2 {
+            color: #1e3c72;
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .section-header p {
+            color: #666;
+            font-size: 1.05rem;
+        }
+
+        /* بطاقات قبل وبعد */
+        .before-after-container {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
             margin-bottom: 50px;
         }
 
-        .card {
+        .comparison-card {
             background: white;
-            border-radius: 12px;
+            border-radius: 16px;
             padding: 25px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-            text-align: center;
-            transition: transform 0.3s ease;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+            border: 1px solid #e9ecef;
         }
 
-        .card:hover {
-            transform: translateY(-5px);
+        .comparison-card h3 {
+            color: #0f2027;
+            font-size: 1.4rem;
+            margin-bottom: 8px;
         }
 
-        .card img, .card video {
+        .comparison-card .card-desc {
+            color: #555;
+            font-size: 0.98rem;
+            margin-bottom: 20px;
+        }
+
+        .image-pair {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .img-box {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .img-box img {
             width: 100%;
-            height: 200px;
+            height: 280px;
             object-fit: cover;
+            display: block;
+        }
+
+        .badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            padding: 6px 18px;
+            border-radius: 20px;
+            color: white;
+            font-weight: bold;
+            font-size: 0.85rem;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+        }
+
+        .badge-before { background-color: #e74c3c; }
+        .badge-after { background-color: #2ecc71; }
+
+        /* قسم الفيديو */
+        .video-card {
+            background: white;
+            border-radius: 16px;
+            padding: 25px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        .video-box {
+            background: #000;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-top: 15px;
+        }
+
+        .video-box video {
+            width: 100%;
+            max-height: 500px;
+            display: block;
+        }
+
+        /* نموذج حجز المعاينة المجانية */
+        .booking-card {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 30px 25px;
+            max-width: 550px;
+            margin: 40px auto;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            border: 1px solid #e9ecef;
+            direction: rtl;
+            text-align: right;
+        }
+
+        .booking-card h3 {
+            color: #0f2027;
+            font-size: 1.6rem;
+            margin-bottom: 5px;
+            text-align: center;
+        }
+
+        .form-subtitle {
+            color: #666;
+            font-size: 0.95rem;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 6px;
+            color: #2c3e50;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #cccccc;
             border-radius: 8px;
-            margin-bottom: 15px;
-            background-color: #000;
+            font-size: 0.95rem;
+            box-sizing: border-box;
         }
 
-        .card h3 {
-            margin-bottom: 10px;
-            color: #2a5298;
+        #submitBtn {
+            width: 100%;
+            background: linear-gradient(135deg, #28a745, #218838);
+            color: white;
+            padding: 14px;
+            border: none;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+            margin-top: 10px;
         }
 
+        #submitBtn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4);
+        }
+
+        .success-box {
+            text-align: center;
+            padding: 20px 10px;
+        }
+
+        .check-icon {
+            width: 60px;
+            height: 60px;
+            background-color: #28a745;
+            color: white;
+            font-size: 30px;
+            line-height: 60px;
+            border-radius: 50%;
+            margin: 0 auto 15px auto;
+        }
+
+        /* قسم وسائل التواصل */
         .contact-box {
             background: white;
-            border-radius: 12px;
-            padding: 30px;
+            border-radius: 16px;
+            padding: 35px 25px;
             text-align: center;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+            border: 1px solid #e9ecef;
+            margin-top: 50px;
         }
 
         .btn-group {
             display: flex;
             justify-content: center;
             gap: 15px;
-            margin-top: 20px;
             flex-wrap: wrap;
+            margin-top: 20px;
         }
 
         .btn {
-            display: inline-block;
-            padding: 12px 25px;
-            border-radius: 25px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 28px;
+            border-radius: 30px;
             text-decoration: none;
             font-weight: bold;
             color: white;
-            transition: transform 0.2s ease, opacity 0.3s ease;
-        }
-
-        .btn:hover {
-            opacity: 0.9;
-            transform: translateY(-2px);
+            transition: all 0.3s ease;
         }
 
         .btn-phone { background-color: #007bff; }
@@ -123,49 +289,144 @@
 
         footer {
             text-align: center;
-            padding: 20px;
-            background-color: #1e3c72;
+            padding: 25px;
+            background-color: #0f2027;
             color: white;
-            margin-top: 50px;
+            margin-top: 60px;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>شركة SMARTRONIC</h1>
-        <p>نقدم أفضل خدمات تركيب المصاعد وأقوى فريق عمل يتعامل مع أي أعطال طوال 24 ساعة، مع خدمة الصيانة الشهرية بأعلى كفاءة.</p>
+        <h1>SMARTRONIC</h1>
+        <p>تركيب وصيانة جميع أنواع المصاعد | أمان - أفضل سعر - جودة عالية - سرعة تنفيذ</p>
     </header>
 
     <div class="container">
-        <h2 class="section-title">خدماتنا ومعرض الأعمال</h2>
         
-        <div class="services-grid">
-            <div class="card">
-                <video controls autoplay muted loop preload="metadata">
-                    <source src="video.mp4" type="video/mp4">
-                    متصفحك لا يدعم تشغيل الفيديو.
-                </video>
-                <h3>صيانة وتركيب المصاعد</h3>
-                <p>معاينة المحركات والمعدات والتركيبات الميكانيكية بأعلى جودة مع فريق صيانة متخصص.</p>
-            </div>
+        <!-- البوستر الإعلاني الرسمي -->
+        <div class="banner-card">
+            <img src="banner.png" alt="سمارترونيك للمصاعد - المعاينة مجاناً">
+        </div>
+
+        <!-- قسم نتائج الصيانة قبل وبعد -->
+        <div class="section-header">
+            <h2>✨ معايير الجودة والتطوير (قبل وبعد الصيانة)</h2>
+            <p>نعمل بدقة متناهية لإعادة مكونات المصعد لمستواها الأصلي لضمان التشغيل الآمن وطول العمر الافتراضي.</p>
+        </div>
+        
+        <div class="before-after-container">
             
-            <div class="card">
-                <img src="https://via.placeholder.com/300x180" alt="خدمة الأعطال">
-                <h3>طوارئ 24 ساعة</h3>
-                <p>فريق جاهز للتعامل مع أي أعطال طارئة طوال اليوم لضمان أمان المصاعد.</p>
+            <div class="comparison-card">
+                <h3>1. إعادة تأهيل وتنظيف ماكينة المصعد (المحرك)</h3>
+                <p class="card-desc">معالجة وتنظيف المحركات من رواسب الزيوت والأتربة المتراكمة لزيادة كفاءة التبريد وسلاسة دوران الطارة.</p>
+                <div class="image-pair">
+                    <div class="img-box">
+                        <span class="badge badge-before">قبل الصيانة</span>
+                        <img src="motor-before.jpg" alt="قبل الصيانة">
+                    </div>
+                    <div class="img-box">
+                        <span class="badge badge-after">بعد الصيانة</span>
+                        <img src="motor-after.jpg" alt="بعد الصيانة">
+                    </div>
+                </div>
             </div>
 
-            <div class="card">
-                <img src="https://via.placeholder.com/300x180" alt="الصيانة الشهرية">
-                <h3>الصيانة الشهرية</h3>
-                <p>عقود صيانة دورية شهرية تفقدية تشمل القطع والزيوت والتحكم الكهربائي.</p>
+            <div class="comparison-card">
+                <h3>2. فحص وتنسيق لوحة التحكم الكهربائية (الكنترول)</h3>
+                <p class="card-desc">إزالة الغبار الدقيق وتنظيم الدوائر الكهربائية لحماية اللوحة وضمان استجابة سريعة للأوامر.</p>
+                <div class="image-pair">
+                    <div class="img-box">
+                        <span class="badge badge-before">قبل الصيانة</span>
+                        <img src="panel-before.jpg" alt="قبل الصيانة">
+                    </div>
+                    <div class="img-box">
+                        <span class="badge badge-after">بعد الصيانة</span>
+                        <img src="panel-after.jpg" alt="بعد الصيانة">
+                    </div>
+                </div>
+            </div>
+
+            <div class="comparison-card">
+                <h3>3. تنظيف وتجهيز أعلى كابينة المصعد والغرفة</h3>
+                <p class="card-desc">إزالة الأتربة والمخلفات المتجمعة أعلى الكابينة للحفاظ على أجهزة الأمان.</p>
+                <div class="image-pair">
+                    <div class="img-box">
+                        <span class="badge badge-before">قبل الصيانة</span>
+                        <img src="cabin-before.jpg" alt="قبل الصيانة">
+                    </div>
+                    <div class="img-box">
+                        <span class="badge badge-after">بعد الصيانة</span>
+                        <img src="cabin-after.jpg" alt="بعد الصيانة">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- قسم الفيديو -->
+        <div class="video-card">
+            <h2>🎬 فيديو توضيحي للتشغيل الميداني</h2>
+            <div class="video-box">
+                <video controls autoplay muted loop preload="metadata">
+                    <source src="video.mp4" type="video/mp4">
+                </video>
             </div>
         </div>
 
+        <!-- نموذج حجز المعاينة المجانية -->
+        <div class="booking-card">
+            <div id="bookingFormBlock">
+                <h3>🎁 احجز معاينة مجانية الآن</h3>
+                <p class="form-subtitle">سجل بياناتك وسيتواصل معك مهندس مختص خلال وقت قصير</p>
+                
+                <form id="freeInspectionForm">
+                    <!-- تم وضع المفتاح الخاص بك هنا بنجاح -->
+                    <input type="hidden" name="access_key" value="da369ded-3ef6-417d-96c0-0d1e6b8e6d89">
+                    <input type="hidden" name="subject" value="طلب معاينة مجانية جديد - SMARTRONIC">
+
+                    <div class="form-group">
+                        <label>الاسم بالكامل *</label>
+                        <input type="text" name="name" placeholder="أدخل اسمك الكريم" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>رقم الهاتف / الواتساب *</label>
+                        <input type="tel" name="phone" placeholder="010XXXXXXXX" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>عدد الأدوار *</label>
+                        <input type="number" name="floors" placeholder="مثال: 5 أدوار" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>مكان البئر *</label>
+                        <input type="text" name="shaft_location" placeholder="مثال: داخل المنور / ممر خارجي / داخل الفيلا" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>الميزانية المقترحة (اختياري)</label>
+                        <input type="text" name="budget" placeholder="مثال: 150,000 جنيه">
+                    </div>
+
+                    <button type="submit" id="submitBtn">
+                        احجز معاينة مجانية الآن
+                    </button>
+                </form>
+            </div>
+
+            <div id="successMessage" class="success-box" style="display: none;">
+                <div class="check-icon">✓</div>
+                <h3>تم استلام طلبك بنجاح!</h3>
+                <p>شكرًا لاهتمامك بـ <strong>SMARTRONIC</strong>. قام فريقنا الهندسي بتسجيل طلب المعاينة وسيتم التواصل معك على الرقم المرفق خلال وقت قصير.</p>
+            </div>
+        </div>
+
+        <!-- قسم التواصل -->
         <div class="contact-box">
-            <h2>تواصل معنا وسجل إعجابك بصفحاتنا</h2>
-            <p>نحن هنا لمساعدتك، اختر وسيلة التواصل أو تابعنا على شبكات التواصل الاجتماعي:</p>
+            <h2>تواصل معنا مباشرة</h2>
             <div class="btn-group">
                 <a href="tel:+201008437663" class="btn btn-phone">📞 اتصال هاتفياً</a>
                 <a href="https://wa.me/201008437663" target="_blank" class="btn btn-whatsapp">💬 تواصل عبر واتساب</a>
@@ -173,11 +434,47 @@
                 <a href="https://www.instagram.com/smartronic.elevators?stkn=MTJyNmpzOHZhMjg4aQ==" target="_blank" class="btn btn-instagram">📸 إنستجرام</a>
             </div>
         </div>
+
     </div>
 
     <footer>
-        <p>جميع الحقوق محفوظة &copy; 2026 شركة SMARTRONIC</p>
+        <p>جميع الحقوق محفوظة &copy; 2026 شركة SMARTRONIC لخدمات المصاعد</p>
     </footer>
+
+    <script>
+    const form = document.getElementById('freeInspectionForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const formBlock = document.getElementById('bookingFormBlock');
+    const successMessage = document.getElementById('successMessage');
+
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        submitBtn.innerText = 'جاري الإرسال...';
+        submitBtn.disabled = true;
+
+        const formData = new FormData(form);
+
+        fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            body: formData
+        })
+        .then(async (response) => {
+            if (response.status === 200) {
+                formBlock.style.display = 'none';
+                successMessage.style.display = 'block';
+            } else {
+                alert('حدث خطأ أثناء الإرسال، يرجى المحاولة مرة أخرى.');
+                submitBtn.innerText = 'احجز معاينة مجانية الآن';
+                submitBtn.disabled = false;
+            }
+        })
+        .catch(error => {
+            alert('تعذر الإرسال، تحقق من اتصالك بالإنترنت.');
+            submitBtn.innerText = 'احجز معاينة مجانية الآن';
+            submitBtn.disabled = false;
+        });
+    });
+    </script>
 
 </body>
 </html>
